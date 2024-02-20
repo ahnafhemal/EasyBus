@@ -30,7 +30,8 @@
     <div class="bg-cover h-[550px]" style="background-image: url('./images/banner.png');">
         <div class="text-center px-52 pt-16 space-y-12">
             <h1 class="text-6xl font-extrabold text-white  roboto-black">End-to-End Travel with <br> <span class="text-[#36dd36]">Easy Paribahan</span></h1>
-            <p class="text-white roboto-regular text-xl">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <p class="text-white roboto-regular text-xl">
+                Experience the convenience and comfort of travel with our bus agency. Discover diverse destinations, punctual schedules, and friendly service. Relax and enjoy the journey as we transport you to your desired destinations.</p>
             <button  class="btn bg-[#1cbc1c] border-0 text-black roboto-bold font-extrabold text-xl"><a href="#ticket">Buy Ticket</a></button>
 
          
@@ -43,14 +44,14 @@
 <main class="">
 <!-- Coupon section start -->
 
-<section class="mt-32 pb-32 container mx-auto max-w-[1170px]">
+<section class="mt-32 pb-32 container mx-auto max-w-[1170px] ">
     <h3 class="roboto-bold text-4xl font-extrabold text-center">Best offers for you</h3>
-    <div class="flex gap-6 my-12">
+    <div class=" flex gap-6 my-12">
         <div class="flex gap-8 items-center bg-[#ffbf0f] px-12 rounded-xl">
             <div class="pr-8 space-y-1">
                 <h2 class="text-4xl font-extrabold roboto-bold">15% OFF</h2>
                 <h6 class="font-bold text-lg">On your next purchase</h6>
-                <p class="text-[gray]">Use by January 2024</p>
+                <p class="text-[gray]">Use by March 2024</p>
             </div>
                 <img src="./images/cupon-devider.png" alt="">
            <div class="pl-10 space-y-1">
@@ -64,7 +65,7 @@
             <div class=" space-y-1">
                 <h2 class="text-4xl font-extrabold roboto-bold">20% OFF</h2>
                 <h6 class="font-bold text-lg">On your next purchase</h6>
-                <p class="text-[gray]">Use by January 2024</p>
+                <p class="text-[gray]">Use by March 2024</p>
             </div>
                 <img src="./images/cupon-devider.png" alt="">
            <div class="pl-5 space-y-1">
@@ -85,7 +86,7 @@
   <div id="ticket" class="border-t-4 border-[#1dd100] rounded-3xl  py-32">
     <div class="text-center px-52 ">
        <h3 class="roboto-bold text-4xl font-extrabold ">Best offers for you</h3>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laudantium in repellendus! Nisi illo ipsum tenetur dicta, nam minus minima ducimus libero explicabo incidunt debitis.</p>
+       <p>Explore our bus travel agency's best offer for unparalleled savings and experiences. Enjoy discounted fares, exclusive packages, and top-notch amenities. Don't miss out on the opportunity to journey affordably and luxuriously.</p>
     </div>
    </div>
    <div class="container mx-auto max-w-[1170px]  bg-white px-8 py-11 rounded-xl">
@@ -93,8 +94,8 @@
         <div class="flex border-0 items-center gap-5">
             <img src="./images/bus-logo.png" alt="">
             <div>
-                <h3 class="text-3xl font-extrabold roboto-bold">Greenline Paribahan</h3>
-                <h6 class="text-gray-600 font-bold">Coach-009-WEB ! AC_Business</h6>
+                <h3 class="text-3xl font-extrabold roboto-bold">Easy Paribahan</h3>
+                <h6 class="text-gray-600 font-bold">Coach-009-WEB | AC_Business</h6>
             </div>
         </div>
         <div class="flex items-center bg-[#4df54d52] space-x-2 rounded-xl p-4">
@@ -118,8 +119,8 @@
 
             <div class="flex gap-6 justify-center pt-4">
                 <p class="bg-[#60676779] p-3 rounded-xl">Boarding Point- Laxmipur</p>
-                <p class="bg-[#60676779] p-3 rounded-xl">Boarding Point- Laxmipur</p>
-                <p class="bg-[#60676779] p-3 rounded-xl">Boarding Point- Laxmipur</p>
+                <p class="bg-[#60676779] p-3 rounded-xl">Dropping Point - Bogura</p>
+                <p class="bg-[#60676779] p-3 rounded-xl">Est. Time - 11 Hour</p>
                
             </div>
          </div>
@@ -334,10 +335,12 @@
                 </form>
                 <!-- <button disabled id="processBtn"   class="btn  w-full bg-[#1dd100]  font-extrabold text-white ">Next</button> <br> -->
 
-                <button
+                <button  onclick="showModal()"
                 disabled id="processBtn" class=" btn  w-full bg-[#1dd100]  font-extrabold text-white">
-                Apply
+                Next
              </button>
+ 
+
 
 
              
@@ -383,10 +386,68 @@
 </footer>
 
 
+
+
+
+
+<!-- section Modal start-->
+
+<!-- Open the modal using ID.showModal() method -->
+
+<section
+id="modal"
+class="bg-[#f2f1f1c4] hidden w-full h-screen top-0 left-0"
+>
+<div class="h-100 flex items-center justify-center">
+   <div
+      class="bg-white mx-auto max-w-[700px]  rounded-2xl text-center  py-10 px-5 "
+   >
+      <img class="mx-auto" src="images/success.png" alt="" />
+      <h2 class="text-[#27AE60] font-roboto text-2xl font-bold my-8">
+         SUCCESS
+      </h2>
+      <div>
+         <p class="text-black text-xl font-medium font-roboto">
+            Thank you for Booking Our Bus Seats.
+         </p>
+         <p class="text-black text-xl font-medium font-roboto">
+            Looking forward to have you onboard with us.
+         </p>
+      </div>
+      <p class="text-[#4A4A4A] text-xl font-light font-roboto mt-6">
+         Shortly you will find a confirmation in your email.
+      </p>
+
+      <div>
+         <button
+            onclick="closeModal()"
+            id="modalCloseBtn"
+            class="bg-[#27AE60] text-white rounded-3xl px-24 py-4 font-semibold font-roboto text-xl mt-5"
+         >
+            Continue
+         </button>
+      </div>
+   </div>
+</div>
+</section>
+
+
+<!-- section Modal  end-->
+
+
+
+
+
+
+
+
+
+
 <script src="./JS/script.js"></script>
 
 </body>
 </html>
+
 
 
 

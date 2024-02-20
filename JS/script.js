@@ -11,7 +11,9 @@ const nextButton=document.getElementById('processBtn');
 const couponInputField=document.getElementById('couponInput');
 const couponButton=document.getElementById('couponButton')
 const phoneNumber=document.getElementById('phoneNumber');
-const couponDiv=document.getElementById('couponDiv')
+const couponDiv=document.getElementById('couponDiv');
+const modal = document.getElementById("modal");
+const modalCloseBtn = document.getElementById("modalCloseBtn");
 
 //====common Use  all variables  ====//
 
@@ -115,17 +117,7 @@ couponButton.addEventListener("click",function(){
    }
 })
 
-
-
 // coupon field & button setup
-
-
-
-
-
-
-
-
 
 // next button functionality start
 
@@ -136,7 +128,6 @@ function activateNextButton(){
       "text-black"
    )
 }
-
 
 function disableNextButton(){
    nextButton.disabled=true;
@@ -150,17 +141,13 @@ function checkOut(){
    console.log('Hi')
 }
 
-phoneNumber.addEventListener("keyup", function () {
+phoneNumber.addEventListener("keyup", function (e) {
    if (seatCounter > 0 && phoneNumber.value !== "") {
       activateNextButton();
    } else {
       disableNextButton();
    }
 });
-
-
-
-
 
 
 // next button functionality end
@@ -177,4 +164,21 @@ function applyDiscount(discountPercent){
   grandTotalPriceElement.innerText=withDiscountTotalPrice
 
   couponDiv.classList.add("hidden") 
+}
+
+
+
+// modal open close
+
+function showModal() {
+   modal.classList.remove("hidden");
+   modal.classList.add("fixed");
+
+}
+
+// for closing the modal
+function closeModal() {
+   modal.classList.remove("fixed");
+   modal.classList.add("hidden");
+   location.reload();
 }
